@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;           /* pure white */
+  --foreground: 220 40% 7%;          /* near-black #0D1117 */
+  --primary: 224 76% 48%;            /* vivid blue #1D4ED8 */
+  --primary-light: 214 100% 97%;     /* pale blue #EFF6FF */
+  --primary-foreground: 0 0% 100%;
+  --accent: 24 95% 48%;              /* orange #EA580C — emergency strip only */
+  --muted: 220 14% 97%;              /* off-white #F9FAFB */
+  --muted-foreground: 220 9% 46%;    /* grey #6B7280 */
+  --border: 220 13% 91%;             /* light border #E5E7EB */
+  --success: 142 71% 38%;            /* green checkmarks */
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+    box-sizing: border-box;
+  }
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 320px;
+  }
+}
+
+/* Floating stat cards */
+.stat-card {
+  position: absolute;
+  background: white;
+  border-radius: 14px;
+  padding: 14px 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+.stat-card-blue {
+  position: absolute;
+  background: hsl(var(--primary));
+  border-radius: 14px;
+  padding: 14px 20px;
+  box-shadow: 0 16px 36px rgba(29, 78, 216, 0.35);
+}
+
+/* Stadium Hero Container */
+.stadium-hero-container {
+  border-radius: 200px 200px 160px 160px;
+  overflow: hidden;
+}
+
+/* Custom smooth transitions */
+.service-card-hover {
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
+}
+.service-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
