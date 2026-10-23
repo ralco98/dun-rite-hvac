@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Award, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 interface AboutSectionProps {
   onOpenEstimateModal: () => void;
